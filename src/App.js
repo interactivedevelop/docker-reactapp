@@ -7,8 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Constant is the exit.
-          I will exit
+          Changed on the Feature Branch
         </p>
         <a
           className="App-link"
