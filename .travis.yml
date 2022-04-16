@@ -9,3 +9,14 @@ before_install:
 script:
   - docker run -e CI=true systtek/docker-reactapp npm run test -- --coverage
 
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "Docker"
+  env: "Docker-env-1"
+  bucket_name: "elasticbeanstalk-eu-west-3-865635137469"
+  bucket_path: "docker-reactapp"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
